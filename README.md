@@ -20,14 +20,11 @@ This aplication need it to run in an Linux server, can be  under Cent Os, Amazon
 
 Pritunl using MongoDB as database so you should have some MongoDB server.
 
-## 
-
-Database Setup
+## Database Setup
 
 [](https://docs.pritunl.com/docs/configuration-5#database-setup)
 
 When Pritunl starts for the first time a database setup prompt will be shown on the web server running on port 443. The database setup will prompt for a setup key and MongoDB URI. To get the setup key ssh on to the server and run the command  `sudo pritunl setup-key`  this will return the setup key. By default the MongoDB URI will be filled with the URI for the localhost MongoDB server. This should be left as it is when the MongoDB server is running on the same server as the Pritunl instance. For Enterprise clusters refer to the MongoDB documentation for  [**Connection String URI Format**](https://docs.mongodb.org/manual/reference/connection-string/). Alternatively this can be set directly in the  `/etc/pritunl.conf`  file or using the cli command. More information on the cli command can be found in the  [**Commands**](https://docs.pritunl.com/docs/commands)  sections. Some MongoDB servers authenticate on the admin database and require the option  `authSource=admin`  to be included in the URI.
-
 
 ## **About Subscriptions**
 
